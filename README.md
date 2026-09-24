@@ -23,7 +23,7 @@ You do not need to understand every file. Start with the walkthrough.
 | [`00-start-here/`](00-start-here/) | The workshop walkthrough and the tokenizer page. | [`walkthrough.md`](00-start-here/walkthrough.md) |
 | [`01-workshop-example-use-case/`](01-workshop-example-use-case/) | The shared workshop activity. It converts photos of table responses into a CSV file and an interactive chart. | [`README.md`](01-workshop-example-use-case/README.md) |
 | [`02-further-use-cases/`](02-further-use-cases/) | Seven additional examples involving transcripts, interviews, manuscripts, research papers, exams, handouts, and interactive simulations. | [`README.md`](02-further-use-cases/README.md) |
-| [`03-your-project/`](03-your-project/) | A blank project with empty `inputs/`, `operations/`, and `outputs/` folders and starter instructions. | [`README.md`](03-your-project/README.md) |
+| [`03-your-project/`](03-your-project/) | A blank project with empty `inputs/`, `operations/`, and `outputs/` folders. | [`inputs/README.md`](03-your-project/inputs/README.md) |
 | [`resources/`](resources/) | A glossary, setup guides, and workshop handouts. | [`README.md`](resources/README.md) |
 
 ## Common folder structure

@@ -254,22 +254,31 @@ Check the chart against the table before you trust it.
 ## Step 9. Your own folder
 
 Open `03-your-project/`. It has empty `inputs/`, `operations/`, and `outputs/`
-folders and a starter `instructions.md`.
+folders.
 
 1. On the project plan handout, write down one task from your own teaching or
    research: what goes in, what should happen, and what should come out.
 2. Put a sample input in `inputs/`. Use material that is safe to share.
 3. Write your first operation as a `.md` file in `operations/`.
-4. Start a new chat on the folder:
+4. Write standing instructions for the folder in a new file,
+   `03-your-project/instructions.md`. For example:
+
+   ```text
+   - Never change or delete files in inputs/. Write new files to outputs/.
+   - Use plain language.
+   - Push back when my claims lack evidence, and say when you are unsure.
+   ```
+
+5. Start a new chat on the folder:
 
    ```text
    Read 03-your-project/instructions.md first. Then follow the operation in
    03-your-project/operations/ on the files in 03-your-project/inputs/.
    ```
 
-**Try this:** ask Claude a question about your topic, then add "push back when
-my claims lack evidence" to `instructions.md`. Start a new chat, point it to
-`instructions.md`, and ask the same question. Compare the answers.
+**Try this:** ask Claude a question about your topic in a chat that has not
+read your instructions. Then start a new chat, point it to `instructions.md`,
+and ask the same question. Compare the answers.
 
 ---
 
