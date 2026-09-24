@@ -33,9 +33,9 @@ outputs/      what it makes
 
 **About Allow.** Clicking Allow lets Claude read, create, edit, and move files in
 this folder. That is why you are using a separate folder that contains only
-workshop files. Use your Harvard account, not a personal one. Do not add folders
-that contain student records, grades, or other sensitive data unless HUIT
-guidance says the data level is approved.
+workshop files. Use your Harvard account, not a personal one. With your Harvard
+account, HUIT approves data up to Level 3. Do not put anything more sensitive
+than that in this folder.
 
 First prompt:
 
@@ -126,6 +126,12 @@ has little formatting overhead. A PDF or Word file must be converted to text
 first, and much of its formatting is lost or costs extra tokens. When you save
 your own prompts and notes for Claude, save them as `.md` files.
 
+To see the difference, open the tokenizer page again and compare the **Plain
+text** and **Markdown** buttons. They hold the same short announcement. The
+Markdown version adds a heading, bold text, and a link for 7 more tokens
+(59 instead of 52). Structure costs a little; a PDF's formatting costs much
+more.
+
 **If you're stuck:** if your Mac has no app for `.md` files, right-click the file
 and choose **Open With → TextEdit**. VS Code also works.
 
@@ -188,7 +194,7 @@ they are already renamed and skip ahead, or ask whether to.
 Models misread, invent, and misplace things while sounding confident. Checking
 one example against the source is the habit to build.
 
-**Computed or generated?** Ask the same question two ways and compare the
+**Optional: computed or generated?** Ask the same question two ways and compare the
 answers:
 
 ```text
@@ -259,26 +265,32 @@ folders.
 1. On the project plan handout, write down one task from your own teaching or
    research: what goes in, what should happen, and what should come out.
 2. Put a sample input in `inputs/`. Use material that is safe to share.
-3. Write your first operation as a `.md` file in `operations/`.
-4. Write standing instructions for the folder in a new file,
-   `03-your-project/instructions.md`. For example:
+3. Write your first operation, in your own words, as a `.md` file in
+   `operations/`.
+4. Start a new chat on the folder:
 
    ```text
-   - Never change or delete files in inputs/. Write new files to outputs/.
-   - Use plain language.
-   - Push back when my claims lack evidence, and say when you are unsure.
+   Follow the operation in 03-your-project/operations/ on the files in
+   03-your-project/inputs/. Write the results to 03-your-project/outputs/.
    ```
 
-5. Start a new chat on the folder:
+**If you're stuck for an idea:** look through `02-further-use-cases/`. Each
+example there is laid out the same way, with its own inputs, operations, and
+outputs.
 
-   ```text
-   Read 03-your-project/instructions.md first. Then follow the operation in
-   03-your-project/operations/ on the files in 03-your-project/inputs/.
-   ```
+**Optional: standing instructions.** Write a file called
+`03-your-project/instructions.md` with rules for any chat that works in this
+folder, for example:
 
-**Try this:** ask Claude a question about your topic in a chat that has not
-read your instructions. Then start a new chat, point it to `instructions.md`,
-and ask the same question. Compare the answers.
+```text
+- Never change or delete files in inputs/. Write new files to outputs/.
+- Use plain language.
+- Push back when my claims lack evidence, and say when you are unsure.
+```
+
+Start your chats with "Read 03-your-project/instructions.md first." To see the
+difference it makes, ask the same question in a chat that has not read it and
+compare.
 
 ---
 
