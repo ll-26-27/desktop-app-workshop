@@ -50,16 +50,17 @@ outputs/example/   completed CSV, HTML, and filename map from an earlier run
 The photo names are inconsistent on purpose (`grp4`, `nine`, `table 7`).
 Renaming them is the first step of the prompt.
 
-## Run it in Cowork
+## Run it in a desktop app
 
 The [walkthrough](../00-start-here/walkthrough.md) takes you through these steps
 one at a time. In short:
 
-1. Give Claude
+1. Ask the assistant to follow
    [`operations/01-photos-to-csv.md`](operations/01-photos-to-csv.md). The prompt
    explains how to normalize filenames, detect cards, assign positions, and
    write the CSV. Paths in the prompts are relative to this folder, so mention
-   `01-workshop-example-use-case` if Claude is working from the top of the repository:
+   `01-workshop-example-use-case` if the app is working from the top of the
+   repository:
 
    ```text
    Working in 01-workshop-example-use-case, follow the instructions in
@@ -68,15 +69,16 @@ one at a time. In short:
 
 2. Review the detected cards and any exclusions before accepting the result.
    Compare at least one photo with its rows in the CSV.
-3. Give Claude
+3. Ask the assistant to follow
    [`operations/02-csv-to-visualization.md`](operations/02-csv-to-visualization.md)
    to create the HTML chart. If you do not have a CSV of your own yet, copy
    `outputs/example/ai_comfort_spectrum.csv` into `outputs/` first.
 
-## Run it in Claude Code
+## Run it in a coding agent
 
-In Claude Code, start `claude` in this folder so the relative paths resolve, and
-give it the same two prompts. Claude Code shows each file change as it happens.
+Open this folder in Codex or start `claude` here for Claude Code so the relative
+paths resolve, then give it the same two prompts. Review each proposed file
+change before accepting it.
 
 ### Optional: the supporting script
 

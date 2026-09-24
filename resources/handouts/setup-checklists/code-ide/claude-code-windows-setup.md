@@ -195,10 +195,10 @@ In PowerShell, create a folder for your projects:
 cd $env:USERPROFILE
 mkdir Development
 cd Development
-git clone https://github.com/ll-26-27/claude-workshop-exercise.git
+git clone https://github.com/ll-26-27/desktop-app-workshop.git
 ```
 
-Adjust the first line if your projects live somewhere else. The repo is public, so cloning needs no login. It clones into a subfolder named `claude-workshop-exercise`.
+Adjust the first line if your projects live somewhere else. The repo is public, so cloning needs no login. It clones into a subfolder named `desktop-app-workshop`.
 
 An example of cloning the repo into a local folder:
 ![alt text](https://files.slack.com/files-pri/T0HTW3H0V-F0B4C5KGB47/image.png?pub_secret=4f4ad17e2b)
@@ -208,7 +208,7 @@ An example of cloning the repo into a local folder:
 ## Step 5 — Open the project in VS Code
 
 ```powershell
-cd claude-workshop-exercise
+cd desktop-app-workshop
 code .
 ```
 ![alt text](https://files.slack.com/files-pri/T0HTW3H0V-F0B4TKY615Y/image.png?pub_secret=92f386d600)
@@ -225,7 +225,7 @@ stay disabled.
    (or `` Ctrl+` ``).
    ![alt text](https://files.slack.com/files-pri/T0HTW3H0V-F0B4VGECD9P/image.png?pub_secret=5b31c14413)
 2. Confirm you're at the project root — the prompt should end in
-   `...\claude-code\claude-workshop-exercise`.
+   `...\claude-code\desktop-app-workshop`.
    ![alt text](https://files.slack.com/files-pri/T0HTW3H0V-F0B4XA6ATL4/image.png?pub_secret=f23f6ddaf1)
 3. Start Claude Code:
    ```powershell

@@ -13,11 +13,14 @@ them, and sample results.
   outputs/       completed examples
   summary.md     purpose, workflow, and limitations
   index.md       file-by-file guide
-  CLAUDE.md      instructions loaded by Claude Code in that folder
+  CLAUDE.md      Claude Code instructions; readable explicitly in other apps
 ```
 
 Read `summary.md` first. Use `index.md` when you need to find a specific file.
-The outputs are examples, not guaranteed results for new source material.
+The outputs are examples, not guaranteed results for new source material. These
+workflows are provider-independent unless a page identifies a product-specific
+feature. In ChatGPT Desktop or another app, ask the assistant to read the
+example's `CLAUDE.md` before starting; Claude Code loads it automatically.
 
 ## Choose an example
 

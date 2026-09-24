@@ -27,14 +27,14 @@ Markdown source.
 | [`terminal-refresher/`](handouts/terminal-refresher/) | Basic terminal commands and file paths |
 | [`claude-code-commands-and-concepts/`](handouts/claude-code-commands-and-concepts/) | Claude Code commands and related concepts |
 | [`security-concerns/`](handouts/security-concerns/) | Prompt injection, excessive permissions, and data exposure |
-| [`what-you-can-make/`](handouts/what-you-can-make/) | Examples of projects that can be built with Claude Code |
+| [`what-you-can-make/`](handouts/what-you-can-make/) | Examples of projects that can be built with desktop AI apps and coding agents |
 
 ## Setup guides
 
 The [`handouts/setup-checklists/`](handouts/setup-checklists/) folder contains:
 
 - `code-ide/`: terminal and VS Code setup for macOS and Windows
-- `desktop-app/`: desktop application setup
+- `desktop-app/`: parallel setup notes for ChatGPT Desktop and Claude Desktop
 - `webui/`: browser setup
 
 The `code-ide/checklists/` folder contains shorter printable checklists.

@@ -17,7 +17,7 @@ Three reviewed examples are included:
 
 1. A transcript with speaker labels is placed in `inputs/`.
 2. [`operations/key-takeaways-prompt.md`](operations/key-takeaways-prompt.md)
-   asks Claude to select exactly ten takeaways and write them to Markdown.
+   asks the assistant to select exactly ten takeaways and write them to Markdown.
 3. Each takeaway has a one-sentence heading followed by a short explanation
    based on the transcript.
 4. A final section records useful points that did not fit in the top ten.

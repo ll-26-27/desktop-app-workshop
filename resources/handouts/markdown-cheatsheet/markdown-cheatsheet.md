@@ -35,12 +35,13 @@ Three things that surprise beginners — and are the whole point:
    and never gets corrupted. There is no hidden formatting.
 2. **It's readable even without rendering.** Even before the symbols turn into
    formatting, `# Welcome` and `- first point` are perfectly understandable.
-3. **You don't have to memorize it.** You can ask Claude to write Markdown for
+3. **You don't have to memorize it.** You can ask an AI assistant to write Markdown for
    you. The goal of this page is just to help you *recognize* the symbols so
    `#` and `*` don't throw you.
 
-This is why nearly everything Claude reads and writes — including every doc in
-this glossary and your [CLAUDE.md](../../glossary/glossary-md/claude-md.md) file — is Markdown.
+This is why nearly everything coding agents read and write — including every
+document in this glossary and project-instructions files such as
+[`CLAUDE.md`](../../glossary/glossary-md/claude-md.md) — is Markdown.
 
 ## The cheatsheet
 
@@ -138,6 +139,6 @@ Markdown. You won't write much of it by hand — but recognizing the symbols mea
 
 - [Markdown](../../glossary/glossary-md/markdown.md) — the short glossary definition
 - [CLAUDE.md](../../glossary/glossary-md/claude-md.md) · [SKILL.md](../../glossary/glossary-md/skill-md.md) — Markdown files you'll meet
-- [Artifact](../../glossary/glossary-md/artifact.md) — other things Claude can produce
+- [Artifact](../../glossary/glossary-md/artifact.md) — other things an assistant can produce
 </content>
 </invoke>

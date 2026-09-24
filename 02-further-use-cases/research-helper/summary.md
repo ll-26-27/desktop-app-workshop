@@ -11,7 +11,7 @@ language models. The completed summaries and a linked index are in `outputs/`.
 
 The prompt at
 [`operations/01-generate-research-summary-prompt.md`](operations/01-generate-research-summary-prompt.md)
-asks Claude to read each source and create an HTML file with:
+asks the assistant to read each source and create an HTML file with:
 
 1. publication details and a one-sentence plain-language description;
 2. a neutral summary of the claim, method, evidence, and limitations;

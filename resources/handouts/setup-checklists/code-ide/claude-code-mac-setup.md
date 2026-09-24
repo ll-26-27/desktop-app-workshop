@@ -161,17 +161,17 @@ In Terminal, create a folder for your projects:
 cd ~
 mkdir Development
 cd Development
-git clone https://github.com/ll-26-27/claude-workshop-exercise.git
+git clone https://github.com/ll-26-27/desktop-app-workshop.git
 ```
 
-Adjust the first line if your projects live somewhere else. The repo is public, so cloning needs no login. It clones into a subfolder named `claude-workshop-exercise`.
+Adjust the first line if your projects live somewhere else. The repo is public, so cloning needs no login. It clones into a subfolder named `desktop-app-workshop`.
 
 ---
 
 ## Step 5 — Open the project in VS Code
 
 ```bash
-cd claude-workshop-exercise
+cd desktop-app-workshop
 code .
 ```
 
@@ -182,7 +182,7 @@ VS Code opens with the project loaded. If it asks **"Do you trust the authors of
 ## Step 6 — Log in to Claude in the integrated terminal
 
 1. In VS Code, open the integrated terminal: **Terminal → New Terminal** (or `` Ctrl+` ``).
-2. Confirm you're at the project root — the prompt should end in `...claude-workshop-exercise %`.
+2. Confirm you're at the project root — the prompt should end in `...desktop-app-workshop %`.
 3. Start Claude Code:
    ```bash
    claude

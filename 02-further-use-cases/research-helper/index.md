@@ -18,7 +18,7 @@ The numeric prefixes link each source to its output.
 ## Operation
 
 [`operations/01-generate-research-summary-prompt.md`](operations/01-generate-research-summary-prompt.md)
-instructs Claude to write a neutral summary and a separate interpretation for
+instructs the assistant to write a neutral summary and a separate interpretation for
 each paper.
 
 ## Example outputs

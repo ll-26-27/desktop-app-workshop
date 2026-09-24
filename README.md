@@ -1,18 +1,20 @@
-# Claude workshop materials
+# Desktop AI app workshop materials
 
 This repository contains materials for a Bok Center Learning Lab workshop on
-working with Claude in folders of files, using Cowork in the Claude desktop app.
-It includes one workshop use case, seven further use cases, reference handouts,
-and a blank project to start your own work.
+working with an AI assistant in folders of files. The main workshop path works
+in both **ChatGPT Desktop** and **Claude Desktop**; some optional materials also
+show the providers' coding tools. It includes one workshop use case, seven
+further use cases, reference handouts, and a blank project for your own work.
 
 You do not need to understand every file. Start with the walkthrough.
 
 ## Start here
 
-1. [Download the ZIP file](https://github.com/ll-26-27/claude-workshop-exercise/archive/refs/heads/main.zip)
+1. [Download the ZIP file](https://github.com/ll-26-27/desktop-app-workshop/archive/refs/heads/main.zip)
    and unzip it into a folder that contains only workshop files.
-2. In the Claude desktop app, open **Cowork**, choose **Add folder**, and select
-   the unzipped folder.
+2. Open the unzipped folder in the desktop app you are using:
+   - **ChatGPT Desktop:** open it as a local workspace or folder.
+   - **Claude Desktop:** open **Cowork**, choose **Add folder**, and select it.
 3. Open [`00-start-here/walkthrough.md`](00-start-here/walkthrough.md) and
    follow the steps.
 
@@ -41,16 +43,18 @@ folder is the record, and you can point several chats at it. If you run an
 example with your own material, keep the original files in `inputs/` and write
 new files to `outputs/`.
 
-## Setup
+## Choose your desktop app
 
-For the desktop app and Cowork, see
-[`resources/handouts/setup-checklists/desktop-app/`](resources/handouts/setup-checklists/desktop-app/).
+The prompts, folders, and review practices are shared. Interface labels and
+permission prompts differ. See the
+[`desktop-app setup guide`](resources/handouts/setup-checklists/desktop-app/README.md)
+for parallel ChatGPT Desktop and Claude Desktop instructions.
 
-## Using Claude Code
+## Optional coding surfaces
 
-Everything here also works in Claude Code, in a terminal or in VS Code. Claude
-Code shows each file change directly, reports how full the context window is,
-and reads a `CLAUDE.md` file in the folder automatically. The further use cases
-include `CLAUDE.md` files for this reason, and the workshop use case includes a
-script for Claude Code users. Setup guides for macOS and Windows are in
+The same folder-based method also works in coding agents. **Codex** is OpenAI's
+coding surface; **Claude Code** is Anthropic's. The further use cases retain
+`CLAUDE.md` files as Claude Code examples, and their reusable prompts can be
+read explicitly in either app. The workshop use case also includes a supporting
+script. Claude Code setup guides for macOS and Windows are in
 [`resources/handouts/setup-checklists/code-ide/`](resources/handouts/setup-checklists/code-ide/).

@@ -18,24 +18,28 @@ outputs/      what it makes
 
 ---
 
-## Step 1. Get the folder into Cowork
+## Step 1. Open the folder in your desktop app
 
 1. Download the repository as a ZIP file:
-   <https://github.com/ll-26-27/claude-workshop-exercise/archive/refs/heads/main.zip>
-2. Make an empty folder for your Claude work, for example `Claude` in your home
-   folder. Move the ZIP file into it.
+   <https://github.com/ll-26-27/desktop-app-workshop/archive/refs/heads/main.zip>
+2. Make an empty folder for your AI-assisted work, for example `AI workshop`
+   in your home folder. Move the ZIP file into it.
 3. **Unzip it.** Double-click the ZIP file. You should now have a folder called
-   `claude-workshop-exercise-main`. Cowork cannot work inside a ZIP file.
-4. Open the Claude desktop app and switch to **Cowork**. Chat cannot open files
-   on your computer.
-5. Choose **Add folder**, select the unzipped folder, and click **Allow**.
-6. Check the model menu. Use Sonnet or Opus for today, not Haiku.
+   `desktop-app-workshop-main`. The app cannot work inside a ZIP file.
+4. Open the folder in your app:
+   - **ChatGPT Desktop:** start a local workspace or folder-based task and choose
+     the unzipped folder.
+   - **Claude Desktop:** switch to **Cowork**, choose **Add folder**, select the
+     unzipped folder, and click **Allow**.
+5. Review the folder-access prompt. Grant access only to the workshop folder.
+6. If your app offers a model menu, choose a model suited to multi-step work
+   rather than its fastest lightweight option.
 
-**About Allow.** Clicking Allow lets Claude read, create, edit, and move files in
-this folder. That is why you are using a separate folder that contains only
-workshop files. Use your Harvard account, not a personal one. With your Harvard
-account, HUIT approves data up to Level 3. Do not put anything more sensitive
-than that in this folder.
+**About folder access.** Granting access lets the app read, create, edit, and
+move files in this folder. That is why you are using a separate folder that
+contains only workshop files. Use your Harvard account, not a personal one, and
+follow the data classification limits approved for that account and app. Do not
+assume the same limit applies to every provider or account.
 
 First prompt:
 
@@ -43,13 +47,13 @@ First prompt:
 What's in here?
 ```
 
-**What you should see:** Claude runs a few tool calls to list and read the
+**What you should see:** the assistant runs a few tool calls to list and read the
 files, then describes the folder. The model does not know your files in advance.
 It reads them with tools, as it does when it searches the web. You may be asked
-to click Allow a second time.
+to approve a tool or folder action.
 
-**If you're stuck:** if Claude says the folder is empty or cannot be read, check
-that you added the unzipped folder, not the ZIP file.
+**If you're stuck:** if the assistant says the folder is empty or cannot be
+read, check that you added the unzipped folder, not the ZIP file.
 
 ---
 
@@ -124,13 +128,12 @@ a few marks for structure: `#` for headings, `-` for lists, `**` for bold.
 Models work well with Markdown because it is common in their training data and
 has little formatting overhead. A PDF or Word file must be converted to text
 first, and much of its formatting is lost or costs extra tokens. When you save
-your own prompts and notes for Claude, save them as `.md` files.
+your own prompts and notes for an AI assistant, save them as `.md` files.
 
 To see the difference, open the tokenizer page again and compare the **Plain
 text** and **Markdown** buttons. They hold the same short announcement. The
-Markdown version adds a heading, bold text, and a link for 7 more tokens
-(59 instead of 52). Structure costs a little; a PDF's formatting costs much
-more.
+Markdown version adds headings and bold text for 7 more tokens (41 instead of
+34). Structure costs a little; a PDF's formatting costs much more.
 
 **If you're stuck:** if your Mac has no app for `.md` files, right-click the file
 and choose **Open With → TextEdit**. VS Code also works.
@@ -180,9 +183,9 @@ Working in 01-workshop-example-use-case, follow the instructions in
 operations/01-photos-to-csv.md.
 ```
 
-This takes several minutes. While it runs, watch the steps Claude takes. The
-prompt begins by renaming the photos; if you completed step 5, Claude may notice
-they are already renamed and skip ahead, or ask whether to.
+This takes several minutes. While it runs, watch the steps the assistant takes.
+The prompt begins by renaming the photos; if you completed step 5, it may
+notice they are already renamed and skip ahead, or ask whether to.
 
 **Check the result.** Choose one photo. Open it, then find its rows in
 `01-workshop-example-use-case/outputs/ai_comfort_spectrum.csv`. Compare them:
@@ -217,7 +220,7 @@ data.
 
 ## Step 7. A new chat on the same folder
 
-Start a new Cowork task on the same folder and ask:
+Start a new task or chat on the same folder and ask:
 
 ```text
 What has been done in this folder so far?
@@ -294,16 +297,20 @@ compare.
 
 ---
 
-## Going further: Claude Code
+## Going further: coding surfaces
 
-Everything in this walkthrough also works in **Claude Code**, which runs in a
-terminal or in VS Code. Claude Code shows the files and every change directly,
-reports how full the context window is (`/context`), and automatically reads a
-file named `CLAUDE.md` in the folder, so you do not have to point it to your
-instructions. The use cases in `02-further-use-cases/` each include a `CLAUDE.md`
-file for this reason. Some also include skills: reusable, multi-step
-instructions you can run by name, such as `/index-transcript` in
-`02-further-use-cases/interview-coding/`.
+Everything in this walkthrough also works in a coding agent. **Codex** is
+OpenAI's coding surface, available through the ChatGPT/Codex desktop experience
+and other interfaces. **Claude Code** is Anthropic's coding surface and runs in
+a terminal or VS Code. Both expose file changes for review and can follow saved
+project instructions.
 
-Setup guides are in `resources/handouts/setup-checklists/code-ide/`. The
-commands handout is in `resources/handouts/claude-code-commands-and-concepts/`.
+The use cases in `02-further-use-cases/` include `CLAUDE.md` files as examples
+of Claude Code's automatic project instructions. In another app, ask the
+assistant to read that file, or copy the reusable parts into the instruction
+file that app supports. Some examples also include skills: reusable, multi-step
+instructions such as the interview-coding workflow.
+
+Claude Code setup guides are in
+`resources/handouts/setup-checklists/code-ide/`. The Claude Code commands
+handout remains a product-specific optional reference.

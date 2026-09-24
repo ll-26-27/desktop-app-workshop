@@ -1,8 +1,8 @@
-# What You Can Make with Claude — A Gallery
+# What You Can Make with Desktop AI Apps — A Gallery
 
 *A gallery of faculty projects, ordered from familiar text toward unfamiliar code.*
 
-**How to read this.** A review of what faculty are building, arranged on one axis. It begins in the writing you already command and descends toward forms that did not exist two years ago. Each row is a genre of output: quick examples first, then one project unpacked — situation, inputs, operations, outputs, and the interface suited to it (Chat / Cowork / Code). The loop is constant — inputs, operations, outputs. Only the medium changes. Begin where you are fluent. Descend.
+**How to read this.** A review of what faculty are building, arranged on one axis. It begins in the writing you already command and descends toward forms that did not exist two years ago. Each row is a genre of output: quick examples first, then one project unpacked — situation, inputs, operations, outputs, and the interface suited to it (Chat / Desktop / Code). The loop is constant — inputs, operations, outputs. Only the medium changes. Begin where you are fluent. Descend.
 
 ## 1. Structured Text & Documents — *most familiar*
 
@@ -15,7 +15,7 @@ Generating finished products in genres you already know.
 - **Inputs:** `meeting-notes.md` — your raw bullet points.
 - **Operations:** one prompt: "Turn these notes into a report with a summary, decisions made, and action items with owners and dates."
 - **Outputs:** `report.md`, or a polished `.docx` on request.
-- **Best fit:** Chat or Cowork; Code if repeated monthly.
+- **Best fit:** Chat or Desktop; Code if repeated monthly.
 
 ## 2. Reference Pages (Static HTML) — *intro to code*
 
@@ -28,7 +28,7 @@ Your first step into code: one file, opens in any browser, no setup.
 - **Inputs:** `glossary.md` — terms and definitions.
 - **Operations:** "Build a single-file HTML page with a search box and click-to-copy, styled for comfortable reading."
 - **Outputs:** `glossary.html` — one file you can email or host anywhere.
-- **Best fit:** Code or Cowork.
+- **Best fit:** Code or Desktop.
 
 ## 3. Web Apps (Next.js) — *more complex*
 
@@ -45,15 +45,15 @@ Multi-page, deployable sites with real interactivity.
 
 ## 4. Bots & Connected Tools (MCP, Slack) — *not covered today*
 
-Claude wired to live data and other services.
+An AI assistant wired to live data and other services.
 
-**Examples:** Claude connected to a library catalogue for live literature search · an art-history lecture pulling live images from a museum's own records · a Slack bot that answers from your course materials · an oral-exam practice bot · Claude connected to your Google Drive.
+**Examples:** an assistant connected to a library catalogue for live literature search · an art-history lecture pulling live images from a museum's own records · a Slack bot that answers from your course materials · an oral-exam practice bot · an assistant connected to your Google Drive.
 
-**Worth knowing: Claude can be wired to live services**
+**Worth knowing: AI assistants can be wired to live services**
 
-Every row above works on files you already have. This one is different: Claude reaches *out* — to a catalogue, a database, an institutional system — and works with whatever it finds there. The plumbing has a name (**MCP**), and a connection has to be deliberately set up and granted before Claude can use it.
+Every row above works on files you already have. This one is different: the assistant reaches *out* — to a catalogue, a database, an institutional system — and works with whatever it finds there. The plumbing may use **MCP** or a provider-specific connector, and access has to be deliberately set up and granted before the assistant can use it.
 
-We are not setting one up today. Worth knowing the category exists — and worth knowing that connecting Claude to a live service is a real grant of access to that account, not a setting you flip casually.
+We are not setting one up today. Worth knowing the category exists — and worth knowing that connecting an AI assistant to a live service is a real grant of access to that account, not a setting you flip casually.
 
 ## 5. Data Visualizations (d3, three.js) — *even more complex*
 
