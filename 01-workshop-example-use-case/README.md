@@ -10,7 +10,8 @@ The use case produces two files:
   placed on the scale
 - `outputs/ai_comfort_spectrum.html`: an interactive chart built from the CSV
 
-Completed examples of both files are included.
+Completed examples of both files are in `outputs/example/`. The `outputs/`
+folder itself starts empty, so your own run does not mix with the examples.
 
 ## Activity that produced the photos
 
@@ -41,34 +42,48 @@ the inputs for the data-processing steps below.
 ## Folder contents
 
 ```text
-inputs/      original HEIC photos, one per table
-operations/  two task prompts and a supporting image-processing script
-outputs/     completed CSV and HTML examples
+inputs/            original HEIC photos, one per table, with inconsistent names
+operations/        two task prompts and a supporting image-processing script
+outputs/example/   completed CSV, HTML, and filename map from an earlier run
 ```
 
-Run commands from this folder because the prompts and scripts use paths that
-are relative to it:
+The photo names are inconsistent on purpose (`grp4`, `nine`, `table 7`).
+Renaming them is the first step of the prompt.
 
-```bash
-cd _workshop-use-cases
-```
+## Run it in Cowork
 
-## Option 1: use the prompt
+The [walkthrough](../00-start-here/walkthrough.md) takes you through these steps
+one at a time. In short:
 
-Give Claude [`operations/01-photos-to-csv.md`](operations/01-photos-to-csv.md).
-The prompt explains how to normalize filenames, detect cards, assign positions,
-and write the CSV. Review the detected cards and any exclusions before accepting
-the result.
+1. Give Claude
+   [`operations/01-photos-to-csv.md`](operations/01-photos-to-csv.md). The prompt
+   explains how to normalize filenames, detect cards, assign positions, and
+   write the CSV. Paths in the prompts are relative to this folder, so mention
+   `01-workshop-example-use-case` if Claude is working from the top of the repository:
 
-After the CSV is complete, give Claude
-[`operations/02-csv-to-visualization.md`](operations/02-csv-to-visualization.md)
-to create the HTML chart.
+   ```text
+   Working in 01-workshop-example-use-case, follow the instructions in
+   operations/01-photos-to-csv.md.
+   ```
 
-## Option 2: use the supporting script
+2. Review the detected cards and any exclusions before accepting the result.
+   Compare at least one photo with its rows in the CSV.
+3. Give Claude
+   [`operations/02-csv-to-visualization.md`](operations/02-csv-to-visualization.md)
+   to create the HTML chart. If you do not have a CSV of your own yet, copy
+   `outputs/example/ai_comfort_spectrum.csv` into `outputs/` first.
+
+## Run it in Claude Code
+
+In Claude Code, start `claude` in this folder so the relative paths resolve, and
+give it the same two prompts. Claude Code shows each file change as it happens.
+
+### Optional: the supporting script
 
 The script automates image conversion, card detection, and position scoring. It
 does not read the text on the cards or decide whether every detected object is a
-valid card. Those steps still require review.
+valid card. Those steps still require review. Run it from this folder in a
+terminal:
 
 ```bash
 python operations/extract.py prep inputs/ work/

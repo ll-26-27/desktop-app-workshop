@@ -34,7 +34,7 @@ Before the repo will make sense, one simple mental model. It isn't an industry t
 - **Operations** (also called tools, commands, or processes) — whatever moves you from inputs to outputs. Often this is just a prompt saved as a text file; sometimes it's a script.
 - **Outputs** — the thing you make. The close reading. The interactive website. The makeup exam.
 
-The whole workshop repo is organized this way. Open `_workshop-use-cases/` and you'll find three folders: `inputs/`, `operations/`, and `outputs/`.
+The whole workshop repo is organized this way. Open `01-workshop-example-use-case/` and you'll find three folders: `inputs/`, `operations/`, and `outputs/`.
 
 Real projects aren't always a clean left-to-right line. Everything still happens inside the **context window** — the system prompt, memory, your files, and the running conversation, all stacked together. So steps can chain together: the output of one operation becomes the input to the next. You might analyze some data (operation 1), then use that analysis as part of the context for writing a report (operation 2). This three-part pattern isn't a rigid assembly line — it's just a way to keep the pieces straight as they stack up.
 
@@ -97,7 +97,7 @@ NOTE: there are a couple of different ways you can open VS code on your computer
 
 In the browser, you paste information *in* and copy results *out* by hand. In Claude Code, that mostly disappears: **whatever file you have open, Claude can automatically see.**
 
-Click a file in the Explorer — say `_workshop-use-cases/outputs/ai_comfort_spectrum.csv` — and ask Claude *"what does this file contain?"* It already has the file, because you have it selected. You'll see the filename appear at the bottom of the Claude panel, confirming what Claude can see.
+Click a file in the Explorer — say `01-workshop-example-use-case/outputs/example/ai_comfort_spectrum.csv` — and ask Claude *"what does this file contain?"* It already has the file, because you have it selected. You'll see the filename appear at the bottom of the Claude panel, confirming what Claude can see.
 
 When you want to hand Claude a specific file, type `@` in the Claude panel: a list of the project's files appears, and you type a few letters of the name to narrow it down, then pick the one you want. For a file outside the current project, paste in its full location instead (Mac: hold Option and right-click the file in Finder → *Copy as Pathname*; Windows: hold Shift and right-click → *Copy as path*).
 
@@ -113,7 +113,7 @@ NOTE: When you create or add a new file inside VS Code, it automatically generat
 
 The repo you copied down holds the main workshop use case plus supporting material.
 
-**`_workshop-use-cases/`** contains the main workshop activity, laid out in the three-part shape above.
+**`01-workshop-example-use-case/`** contains the main workshop activity, laid out in the three-part shape above.
 
 - **`inputs/`** — the raw material. Here, the photos each table took of its
   hand-drawn comfort spectrum.
@@ -127,7 +127,7 @@ The repo you copied down holds the main workshop use case plus supporting materi
 Two more folders hold reference material rather than project work:
 
 - **`resources/`** — the glossary, the printable handouts, and these setup guides.
-- **`further-use-cases/`** — additional worked examples you can copy as starting points for your own
+- **`02-further-use-cases/`** — additional worked examples you can copy as starting points for your own
   projects. Each follows the same `inputs/` → `operations/` → `outputs/` layout.
 
 ### Project instructions: the CLAUDE.md file
@@ -142,7 +142,7 @@ The goal isn't to finish a project. It's to leave with the tool installed and a 
 
 1. **Rename it.** Right-click `my-project` in the Explorer and choose **Rename** (or select it and press Enter). Give it a name that means something to you — a course, a research task, a recurring chore.
 2. **Put something in `inputs/`.** Drag a file in from Finder/Explorer, or create a new file and paste text into it. Anything textual works — a syllabus, a draft email, lecture notes, an exported document. In the workshop, one faculty member started a course-redesign project simply by pasting in the text of a relevant email.
-3. **Write the operation.** Create a text file in `operations/` that describes, in plain sentences, what you want done. The prompt files in `_workshop-use-cases/operations/` are good models to copy; the numbers at the front of their names (`01-`, `02-`) simply keep multi-step operations in order.
+3. **Write the operation.** Create a text file in `operations/` that describes, in plain sentences, what you want done. The prompt files in `01-workshop-example-use-case/operations/` are good models to copy; the numbers at the front of their names (`01-`, `02-`) simply keep multi-step operations in order.
 4. **Ask Claude to run it.** In the Claude panel, point it at your input and your operation, and have it write the result to `outputs/`.
 5. **Iterate.** As with artifacts in the browser — if the first result is 70% right, tell Claude what to change rather than starting over.
 

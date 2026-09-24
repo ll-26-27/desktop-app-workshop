@@ -1,0 +1,288 @@
+# Walkthrough: beyond the chatbox
+
+This is the path through today's workshop. Each step has a prompt you can copy,
+what you should see, and what to do if you get stuck. Work at your own pace. If
+you fall behind, skip ahead: every step works on its own.
+
+In a chat, the conversation is the only record of your work. Here, the record is
+this folder. You will point several chats at the same files, and the files will
+keep your work when a chat ends.
+
+The folder is organized in three parts, and the workshop follows them in order:
+
+```text
+inputs/       what you give the model
+operations/   what you ask it to do, saved as files
+outputs/      what it makes
+```
+
+---
+
+## Step 1. Get the folder into Cowork
+
+1. Download the repository as a ZIP file:
+   <https://github.com/ll-26-27/claude-workshop-exercise/archive/refs/heads/main.zip>
+2. Make an empty folder for your Claude work, for example `Claude` in your home
+   folder. Move the ZIP file into it.
+3. **Unzip it.** Double-click the ZIP file. You should now have a folder called
+   `claude-workshop-exercise-main`. Cowork cannot work inside a ZIP file.
+4. Open the Claude desktop app and switch to **Cowork**. Chat cannot open files
+   on your computer.
+5. Choose **Add folder**, select the unzipped folder, and click **Allow**.
+6. Check the model menu. Use Sonnet or Opus for today, not Haiku.
+
+**About Allow.** Clicking Allow lets Claude read, create, edit, and move files in
+this folder. That is why you are using a separate folder that contains only
+workshop files. Use your Harvard account, not a personal one. Do not add folders
+that contain student records, grades, or other sensitive data unless HUIT
+guidance says the data level is approved.
+
+First prompt:
+
+```text
+What's in here?
+```
+
+**What you should see:** Claude runs a few tool calls to list and read the
+files, then describes the folder. The model does not know your files in advance.
+It reads them with tools, as it does when it searches the web. You may be asked
+to click Allow a second time.
+
+**If you're stuck:** if Claude says the folder is empty or cannot be read, check
+that you added the unzipped folder, not the ZIP file.
+
+---
+
+## Step 2. Inputs: open the tokenizer page
+
+Find `00-start-here/tokenizer.html` and open it in your browser from its path:
+
+1. In Finder, right-click the file, then hold **Option** and choose
+   **Copy "tokenizer.html" as Pathname**. The shortcut is ⌥⌘C.
+2. Paste the path into your browser's address bar and press Return.
+
+**What you should see:** a sentence divided into colored segments, with a list of
+numbers underneath. Each segment is a **token**, and each number is that
+token's ID. Models read and write these numbers, not letters or words. Hover
+over a segment or a number to see which ones go together.
+
+Look for:
+
+- `Unsurprisingly` becomes `Un` + `sur` + `prisingly`, and `unhappily` becomes
+  ` unh` + `app` + `ily`. The splits come from whatever letter combinations were
+  most common in the training data, not from how the word is built.
+- Most tokens include the space before the word. Turn on **Show spaces** to see
+  them.
+- **Capitals:** `Hello`, ` hello`, and ` HELLO` are different tokens, and
+  ` HELLO` splits in two.
+- **Korean:** the same sentence in Korean takes 26 tokens instead of 19.
+  Languages with less training data need more tokens for the same meaning, and
+  a single character can be split across two tokens.
+
+Tokenization is the one input you never control. The next step covers the ones
+you do.
+
+**If you're stuck:** double-clicking `tokenizer.html` in Finder also opens it.
+
+---
+
+## Step 3. Inputs: who controls what
+
+Everything the model receives in a session is text in one **context window**.
+Some of that text is chosen for you, and some you choose:
+
+| input | can you change what it says? | can you choose whether it loads? |
+|---|---|---|
+| tokenization and training data | no | no |
+| system prompt | no, the company writes it | no, it always loads first |
+| memory, project instructions, skills | yes | mostly automatic once turned on |
+| your files, your prompts, instructions you point it to | yes | yes |
+
+Things to try:
+
+1. **Read part of the system prompt** on the printed handout. It is a long set of
+   instructions that loads before your first message. You never see it in the
+   chat.
+2. **Turn on memory** in **Settings → Capabilities**. Memory is also text: saved
+   notes that are added to the start of the context window.
+3. Look at the "It's All Text" handout in
+   `resources/handouts/its-all-text/`. A session starts partly full (the system
+   prompt and memory), and each turn adds your prompt, your inputs, and the
+   model's output until the window fills.
+
+**Why this matters for teaching:** when you evaluate work a student made with
+AI, the parts that show their judgment are the parts they controlled: the
+context they chose, the operations they ran, and how they checked the outputs.
+
+---
+
+## Step 4. Inputs: Markdown
+
+Open any `.md` file in this folder, such as this one. Markdown is plain text with
+a few marks for structure: `#` for headings, `-` for lists, `**` for bold.
+
+Models work well with Markdown because it is common in their training data and
+has little formatting overhead. A PDF or Word file must be converted to text
+first, and much of its formatting is lost or costs extra tokens. When you save
+your own prompts and notes for Claude, save them as `.md` files.
+
+**If you're stuck:** if your Mac has no app for `.md` files, right-click the file
+and choose **Open With → TextEdit**. VS Code also works.
+
+---
+
+## Step 5. Inputs: clean up the use-case photos
+
+Open `01-workshop-example-use-case/inputs/`. It contains 12 photos from a teaching fellow
+activity. Each table placed task cards on a strip of tape from "keep AI out" to
+"let AI do it." Pink cards are teacher tasks; orange cards are student tasks. The
+[use-case README](../01-workshop-example-use-case/README.md) describes the activity.
+
+The filenames are inconsistent, as they usually are when many people submit
+files: `grp4`, `nine`, `group 5 final`, `table 7`. Preparing inputs is the first
+job, and it is the part of the work you control most directly.
+
+Prompt:
+
+```text
+In 01-workshop-example-use-case, copy inputs/ to a new folder called inputs-original/.
+Then rename the photos in inputs/ to group-01, group-02, and so on, using the
+group number in each filename and keeping each file's extension. Before
+renaming, write the old and new names to outputs/filename_map.csv. If two files
+have the same group number, or a file has no number, stop and ask me.
+```
+
+**What you should see:** a new `inputs-original/` folder, renamed files in
+`inputs/`, and a mapping file in `outputs/`. Check in Finder. The files on your
+computer have changed, not just the text in the chat.
+
+**If you're stuck:** the renamed result is recorded in
+`01-workshop-example-use-case/outputs/example/filename_map.csv`.
+
+---
+
+## Step 6. Operations: photos to a table
+
+Open `01-workshop-example-use-case/operations/01-photos-to-csv.md` and skim it before you
+run it. The prompt is a file. If you find yourself typing the same instructions
+again and again, save them in `operations/` so you can reuse them on new inputs.
+
+Prompt:
+
+```text
+Working in 01-workshop-example-use-case, follow the instructions in
+operations/01-photos-to-csv.md.
+```
+
+This takes several minutes. While it runs, watch the steps Claude takes. The
+prompt begins by renaming the photos; if you completed step 5, Claude may notice
+they are already renamed and skip ahead, or ask whether to.
+
+**Check the result.** Choose one photo. Open it, then find its rows in
+`01-workshop-example-use-case/outputs/ai_comfort_spectrum.csv`. Compare them:
+
+- Is every card in the photo in the table?
+- Is any card in the table that is not in the photo?
+- Are the positions roughly right?
+
+Models misread, invent, and misplace things while sounding confident. Checking
+one example against the source is the habit to build.
+
+**Computed or generated?** Ask the same question two ways and compare the
+answers:
+
+```text
+Which task was placed most often at the "keep AI out" end? Just tell me.
+```
+
+```text
+Which task was placed most often at the "keep AI out" end? Write and run a
+script over 01-workshop-example-use-case/outputs/ai_comfort_spectrum.csv to find out.
+```
+
+The first answer is generated from patterns. The second is computed from the
+data.
+
+**If you're stuck:** copy the finished table from
+`01-workshop-example-use-case/outputs/example/ai_comfort_spectrum.csv` into
+`01-workshop-example-use-case/outputs/` and continue with the next step.
+
+---
+
+## Step 7. A new chat on the same folder
+
+Start a new Cowork task on the same folder and ask:
+
+```text
+What has been done in this folder so far?
+```
+
+**What you should see:** the new chat does not remember the earlier
+conversation, but it can read the files that conversation produced. Each chat is
+a new context window. The folder keeps the work.
+
+---
+
+## Step 8. Outputs: make a chart
+
+Make an interactive page from the table. Use the saved operation:
+
+```text
+Working in 01-workshop-example-use-case, follow the instructions in
+operations/02-csv-to-visualization.md.
+```
+
+Or describe what you want in your own words, for example:
+
+```text
+Make a single HTML page from 01-workshop-example-use-case/outputs/ai_comfort_spectrum.csv
+that shows where each table placed each task. Save it in
+01-workshop-example-use-case/outputs/.
+```
+
+Open the result the same way you opened the tokenizer page: copy its path and
+paste it into your browser. Then ask for one change, such as different colors, a
+filter, or a short written summary of the patterns.
+
+Check the chart against the table before you trust it.
+
+**If you're stuck:** a finished version is in
+`01-workshop-example-use-case/outputs/example/ai_comfort_spectrum.html`.
+
+---
+
+## Step 9. Your own folder
+
+Open `03-your-project/`. It has empty `inputs/`, `operations/`, and `outputs/`
+folders and a starter `instructions.md`.
+
+1. On the project plan handout, write down one task from your own teaching or
+   research: what goes in, what should happen, and what should come out.
+2. Put a sample input in `inputs/`. Use material that is safe to share.
+3. Write your first operation as a `.md` file in `operations/`.
+4. Start a new chat on the folder:
+
+   ```text
+   Read 03-your-project/instructions.md first. Then follow the operation in
+   03-your-project/operations/ on the files in 03-your-project/inputs/.
+   ```
+
+**Try this:** ask Claude a question about your topic, then add "push back when
+my claims lack evidence" to `instructions.md`. Start a new chat, point it to
+`instructions.md`, and ask the same question. Compare the answers.
+
+---
+
+## Going further: Claude Code
+
+Everything in this walkthrough also works in **Claude Code**, which runs in a
+terminal or in VS Code. Claude Code shows the files and every change directly,
+reports how full the context window is (`/context`), and automatically reads a
+file named `CLAUDE.md` in the folder, so you do not have to point it to your
+instructions. The use cases in `02-further-use-cases/` each include a `CLAUDE.md`
+file for this reason. Some also include skills: reusable, multi-step
+instructions you can run by name, such as `/index-transcript` in
+`02-further-use-cases/interview-coding/`.
+
+Setup guides are in `resources/handouts/setup-checklists/code-ide/`. The
+commands handout is in `resources/handouts/claude-code-commands-and-concepts/`.
