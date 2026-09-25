@@ -4,11 +4,11 @@ Project-level instructions loaded when Claude Code starts in this folder.
 
 ## What this example is
 
-A worked example of a **standalone Claude Code skill** — the substance is the skill itself, not a deployed webapp. Unlike the other gallery examples that surface a `/api/*` route or a `/route` page, this one ships a single `skill.md` + a `skill.json` manifest that an instructor drops into their own project's `.claude/skills/` directory. The skill takes an existing exam, runs an interview about per-slot topic scope, generates candidate replacement problems, iterates on instructor feedback, and assembles the chosen candidates into a finished make-up exam in the original's format.
+A worked example of a **standalone skill** — the substance is the skill itself, not a deployed webapp. It ships a single `skill.md` plus a `skill.json` manifest that an instructor drops into their own project's `.claude/skills/` directory. The skill takes an existing exam, runs an interview about per-slot topic scope, generates candidate replacement problems, iterates on instructor feedback, and assembles the chosen candidates into a finished make-up exam in the original's format.
 
 The skill in this example is **CS20-tested** (Harvard's discrete math course): the worked run in [`outputs/`](outputs/) is the real Round-1 + Round-2 + Assembly trace from the CS20 spring-2026 final exam. The candidates file has 1,741 lines across 10 slots; the assembled make-up exam is 470 lines of LaTeX in the same format as the original.
 
-This is the gallery's first **standalone-skill** example. Every previous gallery example wraps either a deployed Vercel page (oral-exam-practice-bot, image-API-widget, film-course-concepts-website, text-analysis-and-datavis, literature-course-concept-website) or a CLI-style Claude Code session (interview-coding, smart-text-search-joyce, etc., with skills nested as one piece of a larger project). Here the **skill is the project**.
+In the other examples in this folder a skill is one piece of a larger project. Here the **skill is the project** — there is nothing to deploy and nothing to run but the skill itself.
 
 ## If you just opened this folder
 

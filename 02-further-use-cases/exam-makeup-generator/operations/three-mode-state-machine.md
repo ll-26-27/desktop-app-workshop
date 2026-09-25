@@ -60,7 +60,7 @@ The skill is built around two principles that pull in opposite directions:
 
 The skill's job is to find candidates that change *enough* that recall doesn't help, but *only* the things that don't change difficulty. Concretely: change the **concrete domain** (e.g., disease-test Bayes → spam-filter Bayes), the **scenario**, the **specific numbers**, and the **surface framing**. Do *not* change the underlying technique, the number/structure of subparts, the conceptual depth, or the algebraic complexity.
 
-This is the same posture as several other examples in the gallery — make the limit structurally legible (here, in the Suitability sentence under each candidate that explicitly names *what was preserved* and *what was changed*).
+The posture throughout is to make the limit structurally legible — here, in the Suitability sentence under each candidate, which explicitly names *what was preserved* and *what was changed*.
 
 ## The reader's path
 
