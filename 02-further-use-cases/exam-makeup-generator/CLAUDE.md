@@ -8,7 +8,7 @@ A worked example of a **standalone Claude Code skill** — the substance is the 
 
 The skill in this example is **CS20-tested** (Harvard's discrete math course): the worked run in [`outputs/`](outputs/) is the real Round-1 + Round-2 + Assembly trace from the CS20 spring-2026 final exam. The candidates file has 1,741 lines across 10 slots; the assembled make-up exam is 470 lines of LaTeX in the same format as the original.
 
-This is the gallery's first **standalone-skill** example. Every previous gallery example wraps either a deployed Vercel page (oral-exam-practice-bot, image-API-widget, film-course-concepts-website, text-analysis-and-datavis, literature-course-concept-website) or a CLI-style Claude Code session (class-summarizer, interview-coding, smart-text-search-joyce, etc., with skills nested as one piece of a larger project). Here the **skill is the project**.
+This is the gallery's first **standalone-skill** example. Every previous gallery example wraps either a deployed Vercel page (oral-exam-practice-bot, image-API-widget, film-course-concepts-website, text-analysis-and-datavis, literature-course-concept-website) or a CLI-style Claude Code session (interview-coding, smart-text-search-joyce, etc., with skills nested as one piece of a larger project). Here the **skill is the project**.
 
 ## If you just opened this folder
 
